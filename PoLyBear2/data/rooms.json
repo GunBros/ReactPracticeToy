@@ -1,0 +1,52 @@
+{
+  "rooms": [
+    {
+      "roomNumber": 1,
+      "roomTitle": "방 제목 1",
+      "host": "이현구",
+      "hostTier": "queen"
+    },
+    {
+      "roomNumber": 2,
+      "roomTitle": "방 제목 2",
+      "host": "이정준",
+      "hostTier": "king"
+    },
+    {
+      "roomNumber": 3,
+      "roomTitle": "방 제목 3",
+      "host": "이국신",
+      "hostTier": "jack"
+    },
+    {
+      "roomNumber": 4,
+      "roomTitle": "방 제목 4",
+      "host": "서지오",
+      "hostTier": "joker"
+    },
+    {
+      "roomNumber": 5,
+      "roomTitle": "방 제목 5",
+      "host": "김한나",
+      "hostTier": "ace"
+    },
+    {
+      "roomNumber": 6,
+      "roomTitle": "방 제목 6",
+      "host": "임대영",
+      "hostTier": "jack"
+    },
+    {
+      "roomNumber": 7,
+      "roomTitle": "방 제목7",
+      "host": "dart",
+      "hostTier": "joker"
+    },
+    {
+      "roomNumber": 8,
+      "roomTitle": "방 제목 8",
+      "host": "flutter",
+      "hostTier": "jack"
+    }
+  ]
+}
