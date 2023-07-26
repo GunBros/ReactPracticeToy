@@ -14,6 +14,7 @@ Git을 활용한 협업, fetch를 활용한 API 호출(비동기 프로그래밍
 - create react app을 활용하여 프로젝트를 생성
 
 ## 프로젝트 골격
+
 [프로젝트 구조](https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md) 를 참고하여 코드를 작성
 
 ## 로그인 페이지(/)
@@ -27,7 +28,7 @@ Git을 활용한 협업, fetch를 활용한 API 호출(비동기 프로그래밍
 
 - 로비 페이지에 들어오면 방들의 정보를 확인 가능(rooms.json을 활용)
 - 각각의 방에 표시되어야할 정보
-  - 방 제목
+  - 방 제목fsdfasdafsds
   - 호스트의 아이디
   - 호스트의 티어
   - 티어에 따른 방 색상
