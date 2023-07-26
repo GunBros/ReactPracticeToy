@@ -13,6 +13,10 @@ Git을 활용한 협업, fetch를 활용한 API 호출(비동기 프로그래밍
 
 - create react app을 활용하여 프로젝트를 생성
 
+## 프로젝트 골격
+
+https://github.com/alan2207/bulletproof-react 를 참고하여 코드를 작성
+
 ## 로그인 페이지(/)
 
 - 아이디 비밀번호를 입력하는 input을 생성
