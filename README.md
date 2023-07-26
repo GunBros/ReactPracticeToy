@@ -26,7 +26,6 @@ https://github.com/alan2207/bulletproof-react 를 참고하여 코드를 작성
 
 ## 로비 페이지(/rooms)
 
--
 - 로비 페이지에 들어오면 방들의 정보를 확인 가능(rooms.json을 활용)
 - 각각의 방에 표시되어야할 정보
   - 방 제목
