@@ -4,17 +4,28 @@ const Login = () => {
   const [inputId, setInputId] = useState('');
   const [inputPw, setInputPw] = useState('');
 
-  const [userData, serUserData] = useState('');
+  const [userData, setUserData] = useState([]);
 
   useEffect(() => {
+    console.log('시작');
     const fetchData = async () => {
       try {
-        const response = await fetch('../data/user.json');
+        const response = await fetch('/data/user.json', {
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+        });
+        console.log(response);
         const jsonData = await response.json();
-        set;
-      } catch (error) {}
+        setUserData(jsonData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
     };
-  });
+
+    fetchData();
+  }, []);
 
   const handleInputId = (e) => {
     setInputId(e.target.value);
@@ -22,6 +33,14 @@ const Login = () => {
 
   const handleInputPw = (e) => {
     setInputPw(e.target.value);
+  };
+
+  const handleLogin = (e) => {
+    if (inputId === userData.id && inputPw === userData.password) {
+      alert('로그인 성공');
+    } else {
+      alert('로그인 실패');
+    }
   };
 
   return (
@@ -54,7 +73,7 @@ const Login = () => {
         />
         {inputPw === '' && (
           <label
-            for='exampleFormControlInput22'
+            htmlFor='exampleFormControlInput22'
             class='pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out  dark:text-neutral-200 dark:peer-focus:text-primary'>
             Password
           </label>
@@ -65,7 +84,8 @@ const Login = () => {
           type='button'
           class='inline-block rounded bg-transparent px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-gray-800 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-gray-200 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-gray-200 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-gray-300 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]'
           data-te-ripple-init
-          data-te-ripple-color='light'>
+          data-te-ripple-color='light'
+          onClick={handleLogin}>
           Login
         </button>
       </div>
