@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [inputId, setInputId] = useState('');
@@ -6,8 +7,9 @@ const Login = () => {
 
   const [userData, setUserData] = useState([]);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
-    console.log('시작');
     const fetchData = async () => {
       try {
         const response = await fetch('/data/user.json', {
@@ -16,7 +18,6 @@ const Login = () => {
             Accept: 'application/json',
           },
         });
-        console.log(response);
         const jsonData = await response.json();
         setUserData(jsonData);
       } catch (error) {
@@ -38,6 +39,7 @@ const Login = () => {
   const handleLogin = (e) => {
     if (inputId === userData.id && inputPw === userData.password) {
       alert('로그인 성공');
+      navigate('/list');
     } else {
       alert('로그인 실패');
     }
