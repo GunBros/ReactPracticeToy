@@ -1,9 +1,9 @@
-function room() {
+const Rooms = () => {
   return (
     <>
       <p>여기는 대기방</p>
     </>
   );
-}
+};
 
-export default room;
+export default Rooms;
