@@ -22,7 +22,6 @@ const Rooms = () => {
   }, []);
 
   return (
-    <>
       <div className="h-screen  flex items-center justify-center">
         <div className="container m-auto flex flex-wrap flex-col md:flex-row items-center justify-center">
           {rooms
@@ -36,7 +35,6 @@ const Rooms = () => {
             : null}
         </div>
       </div>
-    </>
   );
 };
 
