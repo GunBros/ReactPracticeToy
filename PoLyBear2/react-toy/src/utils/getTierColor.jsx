@@ -1,17 +1,17 @@
 const getTierColor = (tier) => {
   switch (tier) {
     case 'queen':
-      return 'bg-pink-500';
+      return 'bg-queen';
     case 'king':
-      return 'bg-purple-500';
+      return 'bg-king';
     case 'jack':
-      return 'bg-blue-500';
+      return 'bg-jack';
     case 'joker':
-      return 'bg-red-500';
+      return 'bg-joker';
     case 'ace':
-      return 'bg-green-500';
+      return 'bg-ace';
     default:
-      return 'bg-gray-500';
+      return 'bg-dark-500';
   }
 };
 
