@@ -1,9 +1,9 @@
 import React from 'react';
-import useTierColor from '../../hooks/useTierColor';
+import getTierColor from '../../utils/getTierColor';
 import { useNavigate } from 'react-router-dom';
 
 const Roomcard = ({ room }) => {
-  const tierColor = useTierColor(room.hostTier);
+  const tierColor = getTierColor(room.hostTier);
   const navigate = useNavigate();
 
   const handleRoomDeatil = () => {

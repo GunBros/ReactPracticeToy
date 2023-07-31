@@ -1,4 +1,4 @@
-const useTierColor = (tier) => {
+const getTierColor = (tier) => {
   switch (tier) {
     case 'queen':
       return 'bg-queen';
@@ -15,4 +15,4 @@ const useTierColor = (tier) => {
   }
 };
 
-export default useTierColor;
+export default getTierColor;
