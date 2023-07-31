@@ -10,7 +10,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Login />}></Route>
           <Route exact path='/rooms' element={<Roomlist></Roomlist>}></Route>
-          <Route path='/rooms/:roomNumber' element={<RoomDetails />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
