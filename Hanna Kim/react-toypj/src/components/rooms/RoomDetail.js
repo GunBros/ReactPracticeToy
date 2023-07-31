@@ -5,28 +5,29 @@ const RoomDetail = () => {
   const [room, setRoom] = useState([]);
   const roomNumber = useParams().roomNumber;
   const navigate = useNavigate();
-
-  const roomDetail = async () => {
-    const response = await fetch("/data/rooms.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
-    const roomlist = await response.json();
-    const getRoom = roomlist.rooms.filter(
-      (room) => room.roomNumber === Number(roomNumber)
-    );
-    if (getRoom.length > 0) {
-      setRoom(getRoom[0]);
-    } else {
-      alert("방이 없습니다!");
-      navigate("/rooms");
-    }
-  };
-
+  
+  
   useEffect(() => {
-    roomDetail();
+    const fetchRoomDetail = async () => {
+      const response = await fetch("/data/rooms.json", {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
+      const roomlist = await response.json();
+      const filterRoom = roomlist.rooms.filter(
+        (room) => room.roomNumber === Number(roomNumber)
+      );
+      if (filterRoom.length > 0) {
+        setRoom(filterRoom[0]);
+      } else {
+        alert("방이 없습니다!");
+        navigate("/rooms");
+      }
+    };
+
+    fetchRoomDetail();
   }, []);
 
   return (
