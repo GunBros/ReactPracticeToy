@@ -39,15 +39,9 @@ const Login = () => {
   const handleLogin = () => {
     if (inputId === userData.id && inputPw === userData.password) {
       alert('로그인 성공');
-      navigate('/rooms');
+      navigate('/list');
     } else {
       alert('로그인 실패');
-    }
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      handleLogin();
     }
   };
 
@@ -61,7 +55,6 @@ const Login = () => {
           placeholder='Email address'
           value={inputId}
           onChange={handleInputId}
-          onKeyPress={handleKeyPress}
         />
         {inputId === '' && (
           <label
@@ -79,7 +72,6 @@ const Login = () => {
           placeholder='Password'
           value={inputPw}
           onChange={handleInputPw}
-          onKeyPress={handleKeyPress}
         />
         {inputPw === '' && (
           <label
