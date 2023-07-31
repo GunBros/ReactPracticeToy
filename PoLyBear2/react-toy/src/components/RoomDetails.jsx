@@ -28,7 +28,17 @@ const RoomDetails = () => {
     fetchData();
   }, [roomNumber]);
 
-  return <>{roomData !== null && <RoomDetailcard roomData={roomData} />}</>;
+  return (
+    <>
+      {roomData !== null && (
+        <RoomDetailcard
+          roomTitle={roomData.roomTitle}
+          host={roomData.host}
+          hostTier={roomData.hostTier}
+        />
+      )}
+    </>
+  );
 };
 
 export default RoomDetails;
