@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './Login';
 import Roomlist from './Roomlist';
+import RoomDetails from './RoomDetails';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Login />}></Route>
           <Route exact path='/rooms' element={<Roomlist></Roomlist>}></Route>
-          {/* <Route path='/rooms/:roomNumber' element={<RoomDeatails/>}></Route> */}
+          <Route path='/rooms/:roomNumber' element={<RoomDetails />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
